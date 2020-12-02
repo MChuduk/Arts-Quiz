@@ -130,7 +130,7 @@ function SetNextCard()
 
 	document.querySelector(".card-img").onload = function()
 	{
-		loader.setDisplay("none");
+		setTimeout(() => loader.setDisplay("none"), 300);
 /*		clearTimeout(loaderID);
 */
 		cardContainer.flip();
