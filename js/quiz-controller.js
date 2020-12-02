@@ -125,12 +125,12 @@ function GameEnd()
 
 function SetNextCard()
 {
-	let loader = document.querySelector(".loader");
-	let loaderID = setTimeout(() => loader.style.diplay = "block", 500);
+	let loader = new BasicContainer(".loader");
+	let loaderID = setTimeout(() => loader.setDisplay("block"), 1);
 
 	document.querySelector(".card-img").onload = function()
 	{
-		loader.style.diplay = "none";
+		loader.setDisplay("none");
 		clearTimeout(loaderID);
 
 		cardContainer.flip();
