@@ -1,0 +1,38 @@
+@keyframes fadeOut
+{
+	from
+	{
+		opacity: 1;
+	}
+	to
+	{
+		opacity: 0;
+		transform: translateY(30px);
+	}
+}
+
+@keyframes fadeIn
+{
+	from
+	{
+		transform: translateY(-30px);
+		opacity: 0;
+	}
+	to
+	{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes focus
+{
+	from
+	{
+		transform: scale(1);
+	}
+	to
+	{
+		transform: scale(1.2);
+	}
+}

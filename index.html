@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ArtsQuiz</title>
+		<link rel="stylesheet" type="text/css" href="css/animations.css"/>
+		<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+		<meta name="viewport" content="width=device-width">
+		<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+		<script type="text/javascript" src="js/classes.js"></script>
+		<script type="text/javascript" src="js/quiz-controller.js"></script>
+		<script type="text/javascript" src="js/quiz-data.js"></script>
+	</head>
+	<body>
+		<div class="quiz-header">
+			<p id="round-text"></p>
+		</div>
+		<div class="quiz-screen">
+			<div class="quiz-setup-container" style="display: block;">
+				<div>
+					<div id="left-arrow-button"></div>
+					<div class="info-box" id="preamble-box" style="display: flex;">
+						<p>В современном мире искусства так много интересных и, порой, неоднозначных, вещей, которые мы не сразу можем понять до конца. Они притягивают наше внимание, радуют глаз, заставляют задуматься. Не меньше интересных вещей появляются в повседневном, окружающем нас мире. Случайно или намеренно эти вещи также привлекают нас, и бывает трудно разобраться, где «искусство», а где нет.
+						</p>
+						<p style="font-size: 60px; margin-top: 30px; color: white; text-shadow: #575757 -2px 2px 0;"><strong>?</strong></p>
+					</div>
+					<div class="info-box" id="title-box" style="display: none;">
+						<p style="line-height: 50px;"><span style="font-size: 35px;"><strong>Кто хочет стать искусствоведом</strong></span>
+						<br>Виторина</p>
+					</div>
+					<div class="info-box" id="rules-box" style="display: none;">
+						<p><strong>Правила.</strong> Нужно определить, что изображено на карточке: произведение искусства (картина, скульптура, инсталляция) признанных художников или любительские проекты творческих людей, «случайные» произведения работников ЖКХ, которые были замечены в наших городах. Так называемый ЖЭК-арт.
+						</p>
+						<p style="font-size: 60px; margin-top: 30px; color: white; text-shadow: #575757 -2px 2px 0; margin-top: 80px;"><strong>!</strong></p>
+					</div>
+					<div id="gamemode-box" style="display: none;">
+						<div style="display: flex; flex-direction: column;">
+							<div class="info-box" style="width: 500px; height: 70px; font-size: 25px; margin-bottom: 60px;"><strong>Выберите категорию</strong></div>
+							<div style="display: flex;">
+								<div class="info-box game-mode selected" id="art-vs-baffing">
+									<div>
+										<div>
+											<img src="data/img/icons/lite-art-icon.png">
+											<p>Абстрактная живопись</p>
+										</div>
+									</div>
+									<div><p style="font-size: 40px;"><strong>VS</strong></p></div>
+									<div>
+										<div>
+											<img src="data/img/icons/lite-baffing-icon.png">
+											<p>Бффинг</p>
+										</div>
+									</div>
+								</div>
+								<div class="info-box game-mode" id="sculpture-vs-jekart">
+									<div>
+										<div>
+											<img src="data/img/icons/lite-sculpture-icon.png">
+											<p>Современная скульптура</p>
+										</div>
+									</div>
+									<div><p style="font-size: 40px;"><strong>VS</strong></p></div>
+									<div>
+										<div>
+											<img src="data/img/icons/lite-jekart-icon.png">
+											<p>ЖЭК-арт</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="right-arrow-button"></div>
+				</div>
+			</div>
+			<div class="quiz-game-container" style="display: none;">
+				<div class="card-container">
+					<div class="card-flipper">
+						<div class="card-front">
+							<img class="card-img" src="">
+						</div>
+						<div class="card-back">
+							<div class="info-box" id="choice-result">
+								<img id="sm-icon" src="data/img/icons/toggle-icon.png">
+								<p></p>
+								<img id="mid-icon" src="">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="choice-controls">
+					<div class="choice-button" id="right-choice-button">
+						<img src="data/img/icons/art-icon.png">
+					</div>
+					<div class="choice-button" id="wrong-choice-button">
+						<img src="data/img/icons/baffing-icon.png">
+					</div>
+				</div>
+			</div>
+			<div class="quiz-results-container" style="display: none">
+				<div class="info-box" id="score-box">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
