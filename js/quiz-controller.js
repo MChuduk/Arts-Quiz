@@ -131,8 +131,7 @@ function SetNextCard()
 	document.querySelector(".card-img").onload = function()
 	{
 		setTimeout(() => loader.setDisplay("none"), 300);
-/*		clearTimeout(loaderID);
-*/
+		
 		cardContainer.flip();
 		setTimeout(() => cardContainer.show(), 300);
 		setTimeout(() => choiceButtonsContainer.show(), 500);
