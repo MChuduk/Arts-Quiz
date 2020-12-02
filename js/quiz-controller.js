@@ -1,6 +1,8 @@
 var cardsData = [];
+var roundTime = 8;
 var nextCardIndex = 0;
 var score = 0;
+var timerID;
 
 var gameMainContainer;
 var gameHeaderContainer;
@@ -9,6 +11,7 @@ var cardContainer;
 var choiceButtonsContainer;
 var choiceResultContainer;
 var setupContainer;
+var timer;
 
 var gameMode = "art-vs-baffing";
 var rightChoice = "";
@@ -23,6 +26,7 @@ $(document).ready(function()
 	choiceResultContainer = new ChoiceResultBox("#choice-result");
 	gameResultContainer = new BasicContainer(".quiz-results-container");
 	cardContainer = new CardContainer(".card-container");
+	timer = document.querySelector(".timer-line");
 
 	document.querySelector("#left-arrow-button").addEventListener("click", function(){setupContainer.showContainer(-1)});
 	document.querySelector("#right-arrow-button").addEventListener("click", function(){setupContainer.showContainer(1)});
@@ -88,6 +92,7 @@ function MakeChoice(choice)
 		console.log("wrong answer");
 	}
 	RemoveChoiceEvents();
+	RestartTimer();
 	cardContainer.flip();
 	cardContainer.focus();
 	choiceButtonsContainer.hide();
@@ -135,11 +140,29 @@ function SetNextCard()
 		cardContainer.flip();
 		setTimeout(() => cardContainer.show(), 300);
 		setTimeout(() => choiceButtonsContainer.show(), 500);
+		setTimeout(() => StartTimer(), 500);
 	}
 	document.querySelector("#round-text").innerHTML = (nextCardIndex + 1) + "/20";
 
 	cardContainer.loadData(cardsData[nextCardIndex]);
 	nextCardIndex++;
+}
+
+function RestartTimer()
+{
+	timer.style.removeProperty('animation');
+	clearInterval(timerID);
+}
+
+function StartTimer()
+{
+	timer.style.animation = "timer " + roundTime + "s linear 1";
+	timerID = setTimeout(() => OnTimeEnd(), roundTime * 1000);
+}
+
+function OnTimeEnd()
+{
+	MakeChoice("time-over");
 }
 
 function OnLeftArrowButtonClick()

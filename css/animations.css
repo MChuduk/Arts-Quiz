@@ -48,3 +48,32 @@
     	transform: rotate(360deg); 
     }
 }
+
+@keyframes timer
+{
+	0%
+	{
+		background-color: #b5b5b5;
+		width: 100%;
+	}
+	25%
+	{
+		background-color: #8a8a8a;
+		width: 75%;
+	}
+	50%
+	{
+		background-color: #696969;
+		width: 50%;
+	}
+	75%
+	{
+		background-color: #474747;
+		width: 25%;
+	}
+	100%
+	{
+		background-color: #333333;
+		width: 0%;
+	}
+}

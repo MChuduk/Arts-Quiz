@@ -72,17 +72,22 @@ class ChoiceResultBox extends BasicContainer
 
 	loadAndShow(data, choice)
 	{
-		let rightChoice = data.type === choice;
-
-		if(rightChoice === true)
+		if(choice === data.type)
 		{
+			this.$choiceIcon.style.display = "block";
 			this.$choiceIcon.src = "data/img/icons/toggle-icon.png";
 			this.$text.innerHTML = "<strong>Верно.</strong>";
 		}
 		else
 		{
+			this.$choiceIcon.style.display = "block";
 			this.$choiceIcon.src = "data/img/icons/cross-icon.png";
 			this.$text.innerHTML = "<strong>Неверно.</strong>";
+		}
+		if(choice === "time-over")
+		{
+			this.$choiceIcon.style.display = "none";
+			this.$text.innerHTML = "";
 		}
 		this.$text.innerHTML += " " + data.description;
 		this.$imgIcon.src = data.imgSrc;
