@@ -125,8 +125,14 @@ function GameEnd()
 
 function SetNextCard()
 {
+	let loader = document.querySelector(".loader");
+	let loaderID = setTimeout(() => loader.style.diplay = "block", 500);
+
 	document.querySelector(".card-img").onload = function()
 	{
+		loader.style.diplay = "none";
+		clearTimeout(loaderID);
+
 		cardContainer.flip();
 		setTimeout(() => cardContainer.show(), 300);
 		setTimeout(() => choiceButtonsContainer.show(), 500);
