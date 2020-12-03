@@ -194,19 +194,33 @@ body
 	position: absolute;
 }
 
-.home-button
+.home-button, .home-button-reversed
 {
 	width: 70px;
 	height: 70px;
 	margin: 15px;
-	background-image: url("../data/img/icons/home-icon.png");
 	background-size: cover;
 	position: absolute;
+}
+
+.home-button
+{
+	background-image: url("../data/img/icons/home-icon.png");
+}
+
+.home-button-reversed
+{
+	background-image: url("../data/img/icons/home-hover-icon.png");
 }
 
 .home-button:hover
 {
 	background-image: url("../data/img/icons/home-hover-icon.png");
+}
+
+.home-button-reversed:hover
+{
+	background-image: url("../data/img/icons/home-icon.png");
 }
 
 .info-box
@@ -300,7 +314,7 @@ body
 	height: 30px;
 }
 
-#preamble-box, #title-box, #rules-box, #gamemode-box
+#preamble-box, #title-box, #rules-box, #gamemode-box, #score-box
 {
 	width: 650px;
 	height: 350px;
@@ -398,7 +412,7 @@ body
 
 @media screen and (max-width: 700px), screen and (max-height: 600px)
 {
-	.quiz-setup-container
+	.quiz-setup-container, .quiz-results-container
 	{
 		transform: scale(0.8);
 	}
@@ -406,7 +420,7 @@ body
 
 @media screen and (max-width: 600px), screen and (max-height: 500px)
 {
-	.quiz-setup-container
+	.quiz-setup-container, .quiz-results-container
 	{
 		transform: scale(0.6);
 	}
@@ -414,7 +428,7 @@ body
 
 @media screen and (max-width: 500px), screen and (max-height: 400px)
 {
-	.quiz-setup-container
+	.quiz-setup-container, .quiz-results-container
 	{
 		transform: scale(0.5);
 	}

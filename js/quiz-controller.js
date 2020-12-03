@@ -128,7 +128,7 @@ function GameEnd()
 	gameHeaderContainer.setDisplay("none");
 	gameResultContainer.setDisplay("block");
 
-	document.querySelector("#score-box").innerHTML = "Вас счет: " + score + "/20";
+	document.querySelector("#score-box p").innerHTML = "Вы распознали <strong>" + score + "/20</strong> произведений искусства.";
 	
 	console.log("game end");
 }
