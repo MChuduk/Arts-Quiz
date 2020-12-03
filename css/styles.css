@@ -194,6 +194,21 @@ body
 	position: absolute;
 }
 
+.home-button
+{
+	width: 70px;
+	height: 70px;
+	margin: 15px;
+	background-image: url("../data/img/icons/home-icon.png");
+	background-size: cover;
+	position: absolute;
+}
+
+.home-button:hover
+{
+	background-image: url("../data/img/icons/home-hover-icon.png");
+}
+
 .info-box
 {
 	display: flex;

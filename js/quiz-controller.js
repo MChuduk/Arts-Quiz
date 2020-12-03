@@ -70,6 +70,11 @@ function StartGame()
 	SetNextCard();
 }
 
+function OnHomeButtonClick()
+{
+	document.location.reload();
+}
+
 function OnRightChoiceButtonClick()
 {
 	MakeChoice(rightChoice);

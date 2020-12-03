@@ -154,11 +154,13 @@ class QuizSetupHelper extends BasicContainer
 
 	reset()
 	{
+		this.containersArray[0].setDisplay("flex");
 		this.currentContainerIndex = 0;
 		for(let i = 1; i < this.containersArray.length; i++)
 		{
 			this.containersArray[i].setDisplay("none");
 		}
+		this.showArrowButtons();
 	}
 }
 
