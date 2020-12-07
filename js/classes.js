@@ -5,13 +5,13 @@
 		this.$container = document.querySelector(selector);
 	}
 
-	show(animation = "fadeIn 0.5s forwards")
+	show(animation = "fadeIn 0.5s forwards, moveTop 0.5s forwards")
 	{
 		this.$container.style.visibility = "visible";
 		this.$container.style.animation = animation;
 	}
 
-	hide(animation = "fadeOut 0.5s forwards")
+	hide(animation = "fadeOut 0.5s forwards, moveBottom 0.5s forwards")
 	{
 		this.$container.style.animation = animation;
 
