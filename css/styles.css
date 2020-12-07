@@ -302,6 +302,11 @@ body
 	margin-bottom: 100px;
 }
 
+#choice-result #mid-icon
+{
+	object-fit: contain;
+}
+
 #mid-icon
 {
 	width: 50px;
