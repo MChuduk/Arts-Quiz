@@ -49,7 +49,7 @@ function LoadCardsData(gameMode)
 			'<Cards>' +
 			'<Card type="sculpture" image="data/img/sculpture1.jpg" description="Это «Волшебные сады». Автор - Исая Загар (Isaiah Zagar). США."></Card>' +
 			'<Card type="sculpture" image="data/img/sculpture2.jpg" description="Это скульптура Мишель Ридер (Michelle Reader). Великобритания."></Card>' +
-			'<Card type="sculpture" image="data/img/sculpture3.jpg" description="Это скульптуры Герхард Бэра (Gerhard Bär) из арт-проекта «Social Plastics». Германия."></Card>' +
+			'<Card type="sculpture" image="data/img/sculpture3.jpg" description="Это скульптуры Герхарда Бэра (Gerhard Bär) из арт-проекта «Social Plastics». Германия."></Card>' +
 			'<Card type="sculpture" image="data/img/sculpture4.jpg" description="Это работа художника My Dog Sighs (Великобритания)."></Card>' +
 			'<Card type="sculpture" image="data/img/sculpture5.jpg" description="Это скульптура Мишель Ридер (Michelle Reader). Великобритания."></Card>' +
 			'<Card type="sculpture" image="data/img/sculpture6.jpg" description="Это «Волшебные сады». Автор - Исая Загар (Isaiah Zagar). США."></Card>' +
@@ -58,10 +58,10 @@ function LoadCardsData(gameMode)
 			'<Card type="sculpture" image="data/img/sculpture9.jpg" description="Это скульптура из проекта «Washed Beach» Анжелы Хасселтин Поцци (Angela Hasseltin Pozzi). США."></Card>' +
 			'<Card type="sculpture" image="data/img/sculpture10.jpg" description="Это скульптуры Вейо Рёнккёнена (Финляндия)."></Card>' +
 			'<Card type="jekart" image="data/img/jekart1.jpg" description="Это ЖЭК-арт. Дворовой скульптурный ансамбль Анатолия Ждана из Минска (Беларусь)."></Card>' +
-			'<Card type="jekart" image="data/img/jekart2.jpg" description="Это ЖЭК-арт. Владимир Батуков Из Барнаула (Россия)."></Card>' +
+			'<Card type="jekart" image="data/img/jekart2.jpg" description="Это ЖЭК-арт. Автор - Владимир Батуков Из Барнаула (Россия)."></Card>' +
 			'<Card type="jekart" image="data/img/jekart3.jpg" description="Это ЖЭК-арт. Скульптура возле «Гостинного Двора» в Лепеле (Беларусь). Автор Игорь Трибо."></Card>' +
 			'<Card type="jekart" image="data/img/jekart4.jpg" description="Это ЖЭК-арт. Оформление стены сарая на участке Маргариты Травкиной из Коломны (Россия)."></Card>' +
-			'<Card type="jekart" image="data/img/jekart5.jpg" description="Это ЖЭК-арт. Мини-кремль из дерева на крыше дома Николая Пашнев из поселка Таежный (Россия)."></Card>' +
+			'<Card type="jekart" image="data/img/jekart5.jpg" description="Это ЖЭК-арт. Мини-кремль из дерева на крыше дома Николая Пашнева из поселка Таежный (Россия)."></Card>' +
 			'<Card type="jekart" image="data/img/jekart6.jpg" description="Это ЖЭК-арт. Дом Марины Шишкиной из деревни Вострижанье (Россия)."></Card>' +
 			'<Card type="jekart" image="data/img/jekart7.jpg" description="Это ЖЭК-арт. Дворовой скульптурный ансамбль Анатолия Ждана из Минска (Беларусь)."></Card>' +
 			'<Card type="jekart" image="data/img/jekart8.jpg" description="Это ЖЭК-арт неизвестного автора в парке Санкт-Питербурга (Россия). Фото Маргариты Ялини."></Card>' +
