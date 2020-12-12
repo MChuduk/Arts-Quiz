@@ -173,3 +173,85 @@ class CardData
 		this.description = options.description;
 	}
 }
+
+class StatsBox
+{
+	constructor(selector)
+	{
+		this.$container = document.querySelector(selector);
+		this.$scoreLine = document.querySelector("#score-line");
+
+		this.$goalsText = [];
+		this.$goalsText[0] = this.$container.querySelector("#goal1");
+		this.$goalsText[1] = this.$container.querySelector("#goal2");
+		this.$goalsText[2] = this.$container.querySelector("#goal3");
+		this.$goalsText[3] = this.$container.querySelector("#goal4");
+		this.$goalsText[4] = this.$container.querySelector("#goal5");
+		this.$goalDescription = document.querySelector("#goal-description");
+		this.goalDescription = new BasicContainer("#goal-description");
+		this.step = 27.5;
+		this.currentScoreLineWidth = 0;
+	}
+
+	setStat(score)
+	{
+		this.setScoreLineWidth(score);
+	}
+
+	setScoreLineWidth(score)
+	{
+		if(this.currentScoreLineWidth < score * this.step)
+		{
+			this.currentScoreLineWidth += this.step / 5;
+			this.$scoreLine.style.width = this.currentScoreLineWidth + "px";
+			this.$scoreLine.style.marginRight = (550 - this.currentScoreLineWidth) + "px";
+
+			setTimeout(() => this.setScoreLineWidth(score), 10);
+		}
+		else
+		{
+			this.setGoal(score);
+		}
+	}
+
+	setGoal(score)
+	{
+		this.$goalDescription.innerHTML = "<strong>[" + score + "/20]: </strong>";
+		if(score >= 0 && score < 4)
+		{
+			this.$goalsText[0].style.color = "#2e2e2e";
+			this.$goalsText[0].style.fontWeight = "bold";
+			this.$goalDescription.innerHTML += "К сожалению, вы слабо разбираетесь в искусстве."+
+			 " Или вам не повезло? Это не повод расстраиваться. Теперь-то вы все запомнили и сможете пройти этот тест безупречно.";
+		}
+		if(score >= 4 && score <= 9)
+		{
+			this.$goalsText[1].style.color = "#2e2e2e";
+			this.$goalsText[1].style.fontWeight = "bold";
+			this.$goalDescription.innerHTML += "Вам сложно разобраться. Но, может, это не так и плохо. " + 
+			" Может, это действительно одно и то же. Скажем вам по секрету: искусствоведы и сами еще пока не решили.";
+		}
+		if(score >= 10 && score <= 15)
+		{
+			this.$goalsText[2].style.color = "#2e2e2e";
+			this.$goalsText[2].style.fontWeight = "bold";
+			this.$goalDescription.innerHTML += "У вас есть искусствоведческая интуиция. " + 
+			"Надеемся, что вас заинтересовало современное искусство и к вашей хорошей интуиции добавятся ещё и знания.";
+		}
+		if(score > 15 && score <= 19)
+		{
+			this.$goalsText[3].style.color = "#2e2e2e";
+			this.$goalsText[3].style.fontWeight = "bold";
+			this.$goalDescription.innerHTML += "У вас есть задатки искусствоведа. Вас сложно запутать. Вы неплохо отличаете искусство от «неискусства». " + 
+			"Возможно, вы любитель исусства. Надеемся, что «неискусство» вам тоже понравилось.";
+		}
+		if(score === 20)
+		{
+			this.$goalsText[4].style.color = "#2e2e2e";
+			this.$goalsText[4].style.fontWeight = "bold";
+			this.$goalDescription.innerHTML += "Вас не проведёшь. " + 
+			"После такого блистательного прохождения теста, вам стоит задуматься о карьере арт-критика.";
+		}
+		this.goalDescription.show();
+	}
+}

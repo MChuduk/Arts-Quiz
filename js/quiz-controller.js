@@ -9,6 +9,7 @@ var gameHeaderContainer;
 var gameResultContainer;
 var cardContainer;
 var choiceButtonsContainer;
+var statsContainer;
 var choiceResultContainer;
 var setupContainer;
 var timer;
@@ -24,6 +25,7 @@ $(document).ready(function()
 	gameHeaderContainer = new BasicContainer(".quiz-header");
 	choiceButtonsContainer = new BasicContainer(".choice-controls");
 	choiceResultContainer = new ChoiceResultBox("#choice-result");
+	statsContainer = new StatsBox("#stats-box");
 	gameResultContainer = new BasicContainer(".quiz-results-container");
 	cardContainer = new CardContainer(".card-container");
 	timer = document.querySelector(".timer-line");
@@ -127,8 +129,8 @@ function GameEnd()
 	gameMainContainer.setDisplay("none");
 	gameHeaderContainer.setDisplay("none");
 	gameResultContainer.setDisplay("block");
-
-	document.querySelector("#score-box p").innerHTML = "Вы распознали <strong>" + score + "/20</strong> произведений искусства.";
+	gameResultContainer.show();
+	statsContainer.setStat(score);
 	
 	console.log("game end");
 }

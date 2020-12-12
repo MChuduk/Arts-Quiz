@@ -194,7 +194,7 @@ body
 	position: absolute;
 }
 
-.home-button, .home-button-reversed
+.home-button
 {
 	width: 60px;
 	height: 60px;
@@ -208,19 +208,9 @@ body
 	background-image: url("../data/img/icons/home-icon.png");
 }
 
-.home-button-reversed
-{
-	background-image: url("../data/img/icons/home-hover-icon.png");
-}
-
 .home-button:hover
 {
 	background-image: url("../data/img/icons/home-hover-icon.png");
-}
-
-.home-button-reversed:hover
-{
-	background-image: url("../data/img/icons/home-icon.png");
 }
 
 .info-box
@@ -272,6 +262,31 @@ body
 {
 	width: 100px; 
 	height: 100px;
+}
+
+.stat-goal
+{
+	width: 110px;
+	height: 100px;
+}
+
+.stat-goal p
+{
+	font-size: 15px;
+	line-height: 15px;
+	transition: color .5s;
+	font-family: Helvetica;
+	white-space: nowrap;
+}
+
+.line
+{
+	height: 20px;
+	width: 5px;
+	z-index: -1;
+	border-radius: 5px;
+	background-color: #242424;
+	position: absolute;
 }
 
 #choice-result
@@ -369,6 +384,11 @@ body
 	flex-direction: column
 }
 
+#goal-description
+{
+	visibility: hidden;
+}
+
 #right-arrow-button
 {
 	background-size: cover;
@@ -390,6 +410,39 @@ body
 #left-arrow-button:hover
 {
 	background-image: url("../data/img/icons/arrow-left-hover-icon.png");
+}
+
+#stats-box
+{
+	width: 550px;
+	display: flex;
+}
+
+#stats-box p
+{
+	color: #808080;
+}
+
+ #score-line, #score-line-back
+ {
+	width: 550px;
+	height: 10px;
+	border-radius: 5px;
+	margin-right: 0px;
+	position: absolute;
+ }
+
+#score-line
+{
+	background-color: #6b6b6b;
+}
+
+#score-line-back
+{
+	border: 2px solid black;
+	box-sizing: border-box;
+	border-color: #242424;
+	z-index: 1;
 }
 
 @media screen and (max-width: 500px), screen and (max-height: 600px)

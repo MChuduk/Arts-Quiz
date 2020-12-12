@@ -49,7 +49,7 @@
 									<div>
 										<div>
 											<img src="data/img/icons/lite-baffing-icon.png">
-											<p><span class="tooltip" data-title="англ. buffing - счищение или удаление граффити. Композиции, которые получаются в результате закрашивания на домах нежелательных граффити, случайная живопись работников ЖКХ.">Бффинг</span></p>
+											<p><span class="tooltip" data-title="англ. buffing - счищение или удаление граффити. Композиции, которые получаются в результате закрашивания на домах нежелательных граффити, случайная живопись работников ЖКХ.">Бaффинг</span></p>
 										</div>
 									</div>
 								</div>
@@ -99,11 +99,39 @@
 					</div>
 				</div>
 			</div>
-			<div class="quiz-results-container" style="display: none">
+			<div class="quiz-results-container" style="display: none; visibility: hidden;">
 				<div class="info-box" id="score-box">
-					<p style="font-size: 25px;"></p>
-					<div class="home-button-reversed" onclick="OnHomeButtonClick()" style="position: relative;"></div>
+					<div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+					<div style="height: 150px; display: flex; align-items: center; justify-content: center; text-align: justify;">
+						<div id="score-line-back"></div>
+						<div id="score-line"></div>
+						<div id="stats-box">
+							<div class="stat-goal">
+								<div class="line" style="margin-top: 25px; height: 30px;"></div>
+								<p id="goal1" style="margin-left: -40px;">Подумаешь, я тоже так смогу</p>
+							</div>
+							<div class="stat-goal">
+								<div class="line" style="margin-top: 45px; height: 30px;"></div>
+								<p id="goal2" style="margin-left: -50px; margin-top: 80px;">Ничего не понятно</p>
+							</div>
+							<div class="stat-goal">
+								<div class="line" style="margin-top: 25px; margin-left: 55px; height: 30px;"></div>
+								<p id="goal3">Любопытный глаз</p>
+							</div>
+							<div class="stat-goal">
+								<div class="line" style="margin-top: 45px; margin-left: 110px; height: 30px;"></div>
+								<p id="goal4" style="margin-left: 50px; margin-top: 80px;">Почти искусствовед</p>
+							</div>
+							<div class="stat-goal">
+								<div class="line" style="margin-top: 25px; margin-left: 105px; height: 30px;"></div>
+								<p id="goal5" style="margin-left: -40px;">Настоящий искусствовед</p>
+							</div>
+						</div>
+					</div>
 				</div>
+				<p id="goal-description" style="width: 500px; height: 80px; margin-top: 10px; font-size: 18px;">adsadsd</p>
+				</div>
+				<div class="home-button" onclick="OnHomeButtonClick()" style="width: 80px; height: 80px; position: relative; margin-left: 300px;"></div>
 			</div>
 		</div>
 	</body>
