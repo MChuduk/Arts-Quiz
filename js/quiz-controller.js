@@ -129,7 +129,7 @@ function GameEnd()
 	gameMainContainer.setDisplay("none");
 	gameHeaderContainer.setDisplay("none");
 	gameResultContainer.setDisplay("block");
-	gameResultContainer.show();
+	gameResultContainer.show("fadeIn 0.5s forwards");
 	statsContainer.setStat(score);
 	
 	console.log("game end");
