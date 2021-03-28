@@ -76,13 +76,13 @@ class ChoiceResultBox extends BasicContainer
 		{
 			this.$choiceIcon.style.display = "block";
 			this.$choiceIcon.src = "data/img/icons/toggle-icon.png";
-			this.$text.innerHTML = "<strong>Верно.</strong>";
+			this.$text.innerHTML = "<strong>Дакладна.</strong>";
 		}
 		else
 		{
 			this.$choiceIcon.style.display = "block";
 			this.$choiceIcon.src = "data/img/icons/cross-icon.png";
-			this.$text.innerHTML = "<strong>Неверно.</strong>";
+			this.$text.innerHTML = "<strong>Няправільна.</strong>";
 		}
 		if(choice === "time-over")
 		{
@@ -221,36 +221,36 @@ class StatsBox
 		{
 			this.$goalsText[0].style.color = "#2e2e2e";
 			this.$goalsText[0].style.fontWeight = "bold";
-			this.$goalDescription.innerHTML += "К сожалению, вы слабо разбираетесь в искусстве."+
-			 " Или вам не повезло? Это не повод расстраиваться. Теперь-то вы все запомнили и сможете пройти этот тест безупречно.";
+			this.$goalDescription.innerHTML += "На жаль, вы слаба разбіраецеся ў мастацтве."+
+			 " Ці вам не пашансіла? Гэта не нагода сумаваць. Зараз вы ўсе запомнілі і зможаце прайсці гэты тэст бездакорна.";
 		}
 		if(score >= 4 && score <= 9)
 		{
 			this.$goalsText[1].style.color = "#2e2e2e";
 			this.$goalsText[1].style.fontWeight = "bold";
-			this.$goalDescription.innerHTML += "Вам сложно разобраться. Но, может, это не так и плохо. " + 
-			" Может, это действительно одно и то же. Скажем вам по секрету: искусствоведы и сами еще пока не решили.";
+			this.$goalDescription.innerHTML += "Вам складана разабрацца. Але, можа, гэта не гэтак і дрэнна. " + 
+			" Можа, гэта рэчаісна адно і тое ж? Скажам вам па сакрэце: мастацтвазнаўцы і самі яшчэ пакуль не вырашылі.";
 		}
 		if(score >= 10 && score <= 15)
 		{
 			this.$goalsText[2].style.color = "#2e2e2e";
 			this.$goalsText[2].style.fontWeight = "bold";
-			this.$goalDescription.innerHTML += "У вас есть искусствоведческая интуиция. " + 
-			"Надеемся, что вас заинтересовало современное искусство и к вашей хорошей интуиции добавятся ещё и знания.";
+			this.$goalDescription.innerHTML += "У вас ёсць мастацтвазнаўчая інтуіцыя. " + 
+			"Спадзяемся, што вас зацікавіла сучаснае мастацтва і да вашай добрай інтуіцыі дададуцца яшчэ і веды.";
 		}
 		if(score > 15 && score <= 19)
 		{
 			this.$goalsText[3].style.color = "#2e2e2e";
 			this.$goalsText[3].style.fontWeight = "bold";
-			this.$goalDescription.innerHTML += "У вас есть задатки искусствоведа. Вас сложно запутать. Вы неплохо отличаете искусство от «неискусства». " + 
-			"Возможно, вы любитель исусства. Надеемся, что «неискусство» вам тоже понравилось.";
+			this.$goalDescription.innerHTML += "У вас ёсць задаткі мастацтвазнаўцы. Вас складана заблытаць. Вы нядрэнна адрозніваеце мастацтва ад «немастацтва». " + 
+			"Магчыма, вы аматар мастацтва. Спадзяемся, што «немастацтва» вам таксама спадабалася.";
 		}
 		if(score === 20)
 		{
 			this.$goalsText[4].style.color = "#2e2e2e";
 			this.$goalsText[4].style.fontWeight = "bold";
-			this.$goalDescription.innerHTML += "Вас не проведёшь. " + 
-			"После такого блистательного прохождения теста, вам стоит задуматься о карьере арт-критика.";
+			this.$goalDescription.innerHTML += "Вас не правядзеш! " + 
+			"Пасля такога файнага праходжання тэсту, вам варта задумацца пра кар'еру арт-крытыка.";
 		}
 		this.goalDescription.show();
 	}
