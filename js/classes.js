@@ -228,7 +228,7 @@ class StatsBox
 		{
 			this.$goalsText[1].style.color = "#2e2e2e";
 			this.$goalsText[1].style.fontWeight = "bold";
-			this.$goalDescription.innerHTML += "Вам складана разабрацца. Але, можа, гэта не гэтак і дрэнна. " + 
+			this.$goalDescription.innerHTML += "Вам складана разабрацца. Але, можа, гэта не гэтак і дрэнна? " + 
 			" Можа, гэта рэчаісна адно і тое ж? Скажам вам па сакрэце: мастацтвазнаўцы і самі яшчэ пакуль не вырашылі.";
 		}
 		if(score >= 10 && score <= 15)
